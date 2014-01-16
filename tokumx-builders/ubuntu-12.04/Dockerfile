@@ -3,10 +3,6 @@ RUN apt-get update
 RUN apt-get install -y python-software-properties
 RUN add-apt-repository -y ppa:ubuntu-toolchain-r/test
 RUN add-apt-repository -y ppa:kalakris/cmake
-#RUN echo "deb http://ppa.launchpad.net/ubuntu-toolchain-r/test/ubuntu precise main" > /etc/apt/sources.list.d/ubuntu-toolchain-r.list
-#RUN echo "deb-src http://ppa.launchpad.net/ubuntu-toolchain-r/test/ubuntu precise main" >> /etc/apt/sources.list.d/ubuntu-toolchain-r.list
-#RUN echo "deb http://ppa.launchpad.net/kalakris/cmake/ubuntu precise main" > /etc/apt/sources.list.d/kalakris-cmake.list
-#RUN echo "deb-src http://ppa.launchpad.net/kalakris/cmake/ubuntu precise main" >> /etc/apt/sources.list.d/kalakris-cmake.list
 RUN apt-get update
 RUN for package in busybox-initramfs dmsetup initramfs-tools initscripts plymouth udev; do echo "$package hold"; done | dpkg --set-selections
 RUN apt-get upgrade -y
