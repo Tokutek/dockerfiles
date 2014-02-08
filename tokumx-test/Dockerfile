@@ -8,7 +8,7 @@ RUN for package in busybox-initramfs dmsetup initramfs-tools initscripts plymout
 RUN apt-get upgrade -y
 RUN apt-get install -y build-essential ccache git gcc-4.8 g++-4.8 cmake zlib1g-dev libboost1.48-dev libboost-filesystem1.48-dev libboost-program-options1.48-dev libboost-system1.48-dev libboost-thread1.48-dev libpcap-dev libpcre3-dev libreadline-dev debhelper devscripts buildbot-slave valgrind
 RUN for lang in python ruby java perl; do git clone https://github.com/Tokutek/mongo-$lang-driver; done
-RUN apt-get install -y python-dev
+RUN apt-get install -y python-dev python-nose
 RUN (cd mongo-python-driver; python2 setup.py --with-c-ext install)
 RUN apt-get install -y rubygems
 RUN REALLY_GEM_UPDATE_SYSTEM=1 gem update --system
