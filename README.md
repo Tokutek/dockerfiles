@@ -16,3 +16,6 @@ the following docker images are built from this repo:
  - [leifw/tokumx-buildslave-ubuntu-12.04](https://index.docker.io/u/leifw/tokumx-buildslave-ubuntu-12.10/)
  - [leifw/tokumx-buildslave-ubuntu-13.04](https://index.docker.io/u/leifw/tokumx-buildslave-ubuntu-13.04/)
  - [leifw/tokumx-buildslave-ubuntu-13.10](https://index.docker.io/u/leifw/tokumx-buildslave-ubuntu-13.10/)
+ - [leifw/ubuntu-tokumx](https://index.docker.io/u/leifw/ubuntu-tokumx/)
+ - [leifw/ubuntu-tokumx-mongod](https://index.docker.io/u/leifw/ubuntu-tokumx-mongod/)
+ - [leifw/ubuntu-tokumx-mongos](https://index.docker.io/u/leifw/ubuntu-tokumx-mongos/)
