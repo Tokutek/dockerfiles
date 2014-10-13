@@ -11,7 +11,7 @@ RUN cd /tmp ; rm fuse_*.deb
 RUN cd /tmp ; echo -en '#!/bin/bash\nexit 0\n' > DEBIAN/postinst
 RUN cd /tmp ; dpkg-deb -b . /fuse.deb
 RUN cd /tmp ; dpkg -i /fuse.deb
-RUN apt-get install -y python-dev python-nose ruby ruby-dev openjdk-7-jdk maven cpanminus libdist-zilla-perl
+RUN apt-get install -y python-dev python-nose ruby ruby-dev libsasl2-dev openjdk-7-jdk maven cpanminus libdist-zilla-perl
 RUN REALLY_GEM_UPDATE_SYSTEM=1 gem update --system
 RUN gem install bundler
 RUN for lang in python ruby java perl; do git clone https://github.com/Tokutek/mongo-$lang-driver; done
