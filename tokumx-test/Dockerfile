@@ -19,5 +19,6 @@ RUN (cd mongo-python-driver; python2 setup.py install)
 RUN (cd mongo-ruby-driver; bundle install)
 RUN (cd mongo-java-driver; mvn test-compile)
 RUN (cd mongo-perl-driver; (dzil authordeps | cpanm -n) && (dzil listdeps | cpanm -n))
+RUN cpanm --force Dist::Zilla::Plugin::SurgicalPodWeaver # tests fail, need force
 WORKDIR /data
 CMD buildslave start && tail -f twistd.log
