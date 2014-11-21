@@ -1,6 +1,6 @@
 FROM ubuntu:trusty
 RUN apt-get update
-RUN apt-get install -y build-essential ccache git cmake zlib1g-dev libboost-dev libboost-filesystem-dev libboost-program-options-dev libboost-system-dev libboost-thread-dev libpcap-dev libpcre3-dev libssl-dev libreadline-dev debhelper devscripts buildbot-slave valgrind
+RUN apt-get install -y build-essential ccache git cmake zlib1g-dev libboost-dev libboost-filesystem-dev libboost-program-options-dev libboost-system-dev libboost-thread-dev libpcap-dev libpcre3-dev libssl libssl-dev libreadline-dev debhelper devscripts buildbot-slave valgrind
 # hack to fake a real fuse installation because openjdk-7-jdk needs it
 # via https://gist.github.com/henrik-muehe/6155333
 RUN apt-get install libfuse2
